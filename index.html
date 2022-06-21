@@ -4,11 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocumentCV#2. HTML, CSS, Git Basics</title>
+    <title>CV - Khamzat Dobriev</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico">
 </head>
 <body>
-    <p>Здесь в дальшейшем будет лежать текст</p>
-    <img src="/img/bc2d66e7-7b18-4a01-be1f-3ecd21c510e6.jpg" alt="Мое фото">
+    <header class="header">
+        <div class="container header-container">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
+                    <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#code" class="nav-link">Code</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#courses" class="nav-link">Courses</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main">
+        <div class="container main-container">
+            <section class="section section-profile" id="profile">
+                <img src="./assets/img/bc2d66e7-7b18-4a01-be1f-3ecd21c510e6.jpg" alt="Photo of Khamzat Dobriev" class="section-profile-photo">
+                <div class="section-profile-title">
+                <h1 class="section-title main-title">Khamzat Dobriev</h1>
+                <h3 class="section-subtitle">Junior Front-End Developer</h3>
+            </section>
+        </div>
+        <section class="section" id="Summary">
+            <h2 class="section-title">Summary</h2>
+            <p>I am 26. Currently working as an IT specialist at the Armkhi Resort, one of the largest resorts in the North Caucasus. Unfortunately, the work is not related to development, I control the work of system programs and applications involved in our business. If possible, I automate business processes, reduce the human factor and modernize our business.
+                However, I have been thinking about retraining as a front-end developer for several years now.
+                The main problem is a lack of motivation and a small amount of practice.
+                I hope that after going through all the stages in RSSchool, I will be able to get an offer and become a frontend developer and make my dream come true.</p>
+        </section>
+        <section class="section" id="contacts">
+            <h2 class="section-title">Contacts</h2>
+            <ul class="section-list">
+                <li class="section-item contacts-item">
+                Nazran, Republic of Ingushetia, Russia.
+            </li>
+            <li class="section-item contacts-item">
+                Email: <a href="mailto:XDobriev@yandex.ru" title="email">XDobriev@yandex.ru</a>
+            </li>
+            <li class="section-item contacts-item">
+                Github: <a href="https://github.com/XDobriev" title="github">XDobriev</a>
+            </li>
+            <li class="section-item contacts-item">
+                Telegram: <a href="https://t.me/XDobriev" title="Telegram">@XDobriev</a>
+            </li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2 class="section-title" id="Skills">Skills</h2>
+            <p>I have mastered HTML, CSS, basic JavaScript, a little PHP. Made several layouts.</p>
+        </section>
+        <section class="section"><h2 class="section-title">Education</h2>
+            <p>At the moment I am studying in absentia in the second year of Synergy University.</p>
+        </section>
+        <section class="section"><h2 class="section-title">Code</h2></section>
+        <section class="section"><h2 class="section-title">Curses</h2></section>
+    </main>
+    <footer class="footer">
+        <a class="footer__github" href="https://github.com/XDobriev" target="_blank">
+            My GitHub
+        </a>
+        <p class="footer__year">2022</p>
+        <a class="footer__rsschool" href="https://rs.school/js/" target="_blank">
+        <img class="footer__logo" src="./assets/svg/rs_school_js.svg" alt="RS School">
+
+    </footer>
 </body>
 </html>
