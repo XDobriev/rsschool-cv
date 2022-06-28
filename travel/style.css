@@ -187,10 +187,6 @@ h1 {
     line-height: 32px;
     font-weight: 500;
     transition: linear 0.5s;
-    -webkit-transition: linear 0.3s;
-    -moz-transition: linear 0.3s;
-    -ms-transition: linear 0.3s;
-    -o-transition: linear 0.3s;
 }
 
 /* MAIN - STEPS */
@@ -201,17 +197,19 @@ h1 {
 
 }
 
-.steps_title {
-    width: 611px;
-    height: 53px;
+.main_title {
+    margin: 81px auto 45px;
+    text-align: center;
+}
+
+.main_title h2 {
     font-family: 'Red Hat Text';
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
     line-height: 53px;
     color: #F2785C;
-    margin: 81px auto 45px;
-    text-align: center;
+    
 }
 
 .steps_content {
@@ -225,18 +223,10 @@ h1 {
     flex-direction: column;
     align-items: center;
     transition: linear 0.3s;
-    -webkit-transition: linear 0.3s;
-    -moz-transition: linear 0.3s;
-    -ms-transition: linear 0.3s;
-    -o-transition: linear 0.3s;
 }
 
 .steps_item:hover {
     transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
 }
 .steps_text {
     font-family: 'Aleo';
@@ -252,4 +242,78 @@ h1 {
 .steps_icon{
     width: 100px;
     height: 100px;
+}
+
+/* DESTINATIONS */
+
+.destinations_item {
+    position: relative;
+}
+
+.destinations_slider {
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    position: relative;
+    gap: 60px;
+    overflow: hidden;
+}
+
+
+.destinations .main_title h2 {
+    margin-top: 92px;
+}
+
+.destinations_image {
+    border-radius: 16px;
+}
+
+.destinations_content {
+    font-family: 'Red Hat Text';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    position: absolute;
+    color: #fff;
+    bottom: 45px;
+    left: 15px;
+    text-transform: uppercase;
+}
+
+.slider_circle {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.destinations_slider_circle {
+    width: 20px;
+    height: 20px;
+    background: rgba(242, 120, 92, 0.5);
+    border-radius: 50%;
+    display: block;
+}
+
+.destinations_slider_circle_active {
+    width: 20px;
+    height: 20px;
+    background: #F2785C;
+    border-radius: 50%;
+    display: block;
+}
+
+.arrow {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 32px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
 }
