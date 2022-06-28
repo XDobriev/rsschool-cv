@@ -37,7 +37,7 @@ body {
 
 .background_top {
     width: 1440px;
-    height: 3735px;
+    height: 765px;
     background: url(./assets/img/background-image-top.jpg) no-repeat;
 }
 
@@ -81,28 +81,35 @@ body {
     text-decoration: none;
 }
 
-.header_button {
-    width: 103px;
-    height: 41px;
+button {
+    padding: 10px 30px;
     background: #0D606F;
+    font-family: 'Red Hat Text';
+    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
-    border-style: none;
-    font-family: 'Red Hat Text';
-    margin: 25px, 120px, 24px, 196px;
-}
-
-.btn_header {
-    text-align: center;
-    color: white;
-    padding: 10px, 30px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
+    color: #fff;
     line-height: 21px;
+    font-size: 16px;
+    font-weight: normal;
+    transition: linear 0.3s;
+    -webkit-transition: linear 0.3s;
+    -moz-transition: linear 0.3s;
+    -ms-transition: linear 0.3s;
+    -o-transition: linear 0.3s;
 }
 
-/* MAIN */
+button:hover {
+    background-color: rgb(47, 146, 47);
+}
+
+
+/* MAIN - PREVIEW*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 .preview {
     width: 892px;
@@ -128,6 +135,7 @@ h1 {
     font-size: 80px;
     line-height: 96px;
     color: #FFFFFF;
+    margin: 0;
 }
 
 .subtitle_preview {
@@ -137,13 +145,111 @@ h1 {
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
+    margin: 0;
+    margin-top: 31px;
 }
 
-.search_preview p {
+.search-form {
+    position: relative;
+}
+
+.search-form__item {
+    width: 892px;
+    margin-top: 46px;
+}
+
+.search-form__window[type="text"] {
+    box-sizing: border-box;
+    width: 892px;
+    height: 95px;
+    font-size: 24px;
     font-family: 'Aleo';
     font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
     line-height: 29px;
+    font-weight: 400;
+    padding-left: 41px;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 16px;
+}
+
+.search-form__window[type="text"]::placeholder {
     color: #F2785C;
+}
+.search-form__button {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 13px 32px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    transition: linear 0.5s;
+    -webkit-transition: linear 0.3s;
+    -moz-transition: linear 0.3s;
+    -ms-transition: linear 0.3s;
+    -o-transition: linear 0.3s;
+}
+
+/* MAIN - STEPS */
+.steps {
+    width: 1177px;
+    height: 247px;
+    margin: 0 auto;
+
+}
+
+.steps_title {
+    width: 611px;
+    height: 53px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+    margin: 81px auto 45px;
+    text-align: center;
+}
+
+.steps_content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.steps_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: linear 0.3s;
+    -webkit-transition: linear 0.3s;
+    -moz-transition: linear 0.3s;
+    -ms-transition: linear 0.3s;
+    -o-transition: linear 0.3s;
+}
+
+.steps_item:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+.steps_text {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.steps_icon{
+    width: 100px;
+    height: 100px;
 }
