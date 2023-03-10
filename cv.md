@@ -14,4 +14,49 @@
 ## At the moment my stack looks like this - HTML5, CSS3, SASS, WordPress, Basic JS, a little PHP, GIT, Figma, Adobe Illustrator.
 
 ## Unfortunately, I don't have much experience. Several pet-projects, ToDo, several layouts.
-## As I study, I will add projects in this CV.
+## As I study, I will add projects in this CV. 
+
+<section id="Destinations" class="destination">
+            <div class="main_title">
+                <h2>POPULAR DESTINATIONS</h2>
+            </div>
+            <div class="destinations_slider">
+                <div class="destinations_item">
+                    <img class="destinations_image" src="./assets/img/Destinations1.jpg" alt="" width="800" height="800">
+                    <span class="destinations_content">Canada</span>
+                </div>
+                <div class="destinations_item">
+                    <img class="destinations_image" src="./assets/img/Destinations2.jpg" alt="" width="800" height="800">
+                    <span class="destinations_content">Japan</span>
+                </div>
+                <div class="destinations_item">
+                    <img class="destinations_image" src="./assets/img/Destinations3.jpg" alt="" width="800" height="800">
+                    <span class="destinations_content">USA</span>
+                </div>
+            </div>
+
+```
+<section id="Destinations" class="destination">
+            <div class="main_title">
+                <h2>POPULAR DESTINATIONS</h2>
+            </div>
+            <div class="destinations_slider">
+                <div class="destinations_item">
+                    <img class="destinations_image" src="./assets/img/Destinations1.jpg" alt="" width="800" height="800">
+                    <span class="destinations_content">Canada</span>
+                </div>
+                <div class="destinations_item">
+                    <img class="destinations_image" src="./assets/img/Destinations2.jpg" alt="" width="800" height="800">
+                    <span class="destinations_content">Japan</span>
+                </div>
+                <div class="destinations_item">
+                    <img class="destinations_image" src="./assets/img/Destinations3.jpg" alt="" width="800" height="800">
+                    <span class="destinations_content">USA</span>
+                </div>
+            </div>
+
+```
+
+## Completed courses: layout designer - IGS School [https://igsinter.net/dobriev-hamzat/](Сертификат)
+
+## English level - B1
