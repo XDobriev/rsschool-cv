@@ -1,6 +1,5 @@
 # Хамзат Добриев
 
-![Фото профиля](https://disk.yandex.ru/i/896_PbXWHlF4yA)
 
 **Телефон:** +7 (963) 134-26-93  
 **Email:** XDobriev@yandex.ru  
@@ -11,19 +10,21 @@
 ---
 
 ## 👤 О себе
+
 Frontend-разработчик, начинающий карьеру в сфере веб-разработки.  
 Более трёх лет опыта в должности IT-специалиста в туристической компании.  
-Умею подключаться на разных стадиях проекта, внедрять и настраивать системы автоматизации.  
+Умею подключаться на разных стадиях проекта, внедрять и настраивать системы автоматизации.
 
 **Сильные стороны:** самостоятельность, работа с большим объёмом информации, коммуникация с командой и заказчиками.  
-**Цель:** развиваться в сфере Frontend-разработки, укрепляя навыки JavaScript, React и современных инструментов.  
+**Цель:** развиваться в сфере Frontend-разработки, укрепляя навыки JavaScript, React и современных инструментов.
 
 ---
 
 ## 🛠 Навыки
-- **Frontend:** HTML, CSS, JavaScript, React  
-- **Инструменты и системы:** Git, Figma, WordPress, ERP-системы (Битрикс24, TravelLine, iiko, Medesk)  
-- **Soft skills:** самостоятельность, работа в команде, умение вести несколько проектов одновременно, обучение других  
+
+- **Frontend:** HTML, CSS, JavaScript, React
+- **Инструменты и системы:** Git, Figma, WordPress, ERP-системы (Битрикс24, TravelLine, iiko, Medesk)
+- **Soft skills:** самостоятельность, работа в команде, умение вести несколько проектов одновременно, обучение других
 
 ---
 
@@ -36,7 +37,6 @@ let habbits = [];
 const HABBIT_KEY = 'HABBIT_KEY';
 let globalActiveHabbitId;
 
-/* page */
 const page = {
   menu: document.querySelector('.menu__list'),
   header: {
@@ -52,7 +52,8 @@ const page = {
     index: document.getElementById('add-habbit-popup'),
     iconField: document.querySelector('.popup__form input[name="icon"]')
   }
-}
+};
+```
 
 ## 🚀 Проекты
 - **[Habbit App](https://github.com/XDobriev/habbit-app)**  
@@ -116,5 +117,5 @@ const page = {
 ---
 
 ## 🌍 Английский язык
-- Уровень: **B1 (Pre-Intermediate)**  
+- Уровень: **A2 (Pre-Intermediate)**  
 - Опыт: чтение технической документации, базовое общение в профессиональной среде  
