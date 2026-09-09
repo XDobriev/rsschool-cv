@@ -1,121 +1,125 @@
 # Хамзат Добриев
 
+**Frontend Developer** — готов к релокации
 
-**Телефон:** +7 (963) 134-26-93  
-**Email:** XDobriev@yandex.ru  
-**Telegram:** [@XDobriev](https://t.me/XDobriev)  
-**GitHub:** [github.com/XDobriev](https://github.com/XDobriev)  
-**Discord:** xdobriev  
+## Контактная информация
 
----
+- **Email:** XDobriev@yandex.ru
+- **Телефон:** +7 (963) 134-26-93
+- **Telegram:** [@XDobriev](https://t.me/XDobriev)
+- **GitHub:** [github.com/XDobriev](https://github.com/XDobriev)
+- **Discord:** xdobriev
+- **Сайт:** [avtorstudio.com](https://avtorstudio.com)
+- **Локация:** Назрань — удалённо
 
-## 👤 О себе
+![Хамзат Добриев](./photo.jpg)
 
-Frontend-разработчик, начинающий карьеру в сфере веб-разработки.  
-Более трёх лет опыта в должности IT-специалиста в туристической компании.  
-Умею подключаться на разных стадиях проекта, внедрять и настраивать системы автоматизации.
+## О себе
 
-**Сильные стороны:** самостоятельность, работа с большим объёмом информации, коммуникация с командой и заказчиками.  
-**Цель:** развиваться в сфере Frontend-разработки, укрепляя навыки JavaScript, React и современных инструментов.
+Frontend-разработчик с опытом создания SaaS-продукта с реальной монетизацией. Разрабатываю интерфейсы на React и TypeScript, уделяя внимание качеству кода, пользовательскому опыту и продуктовым метрикам. Интересно развиваться в команде, где можно участвовать в развитии продукта, обсуждать решения и учиться у сильных разработчиков. Активно применяю AI-инструменты в ежедневной разработке.
 
----
+## Навыки
 
-## 🛠 Навыки
+**Frontend:** React, TypeScript, JavaScript ES6+, HTML5 / CSS3, TanStack Query, React Hook Form, TipTap
 
-- **Frontend:** HTML, CSS, JavaScript, React
-- **Инструменты и системы:** Git, Figma, WordPress, ERP-системы (Битрикс24, TravelLine, iiko, Medesk)
-- **Soft skills:** самостоятельность, работа в команде, умение вести несколько проектов одновременно, обучение других
+**Backend & данные:** Supabase, PostgreSQL, SQLite, REST API, FastAPI
 
----
+**Инструменты:** Git / GitHub Actions, CI/CD, Vercel, Figma, Vitest, Playwright
 
-## 💻 Пример кода (Habbit App)
+**AI в разработке:** Claude Code, Cursor
 
-```javascript
-'use strict';
+## Пример кода
 
-let habbits = [];
-const HABBIT_KEY = 'HABBIT_KEY';
-let globalActiveHabbitId;
+Фрагмент из [gym95](https://github.com/XDobriev/gym95) — команда `/export` формирует markdown-выгрузку дневника тренировок:
 
-const page = {
-  menu: document.querySelector('.menu__list'),
-  header: {
-    h1: document.querySelector('.h1'),
-    progressPercent: document.querySelector('.progress__percent'),
-    progressCoverBar: document.querySelector('.progress__cover-bar'),
-  },
-  content: {
-    daysContainer: document.getElementById('days'),
-    nextDay: document.querySelector('.habbit__day')
-  },
-  popup: {
-    index: document.getElementById('add-habbit-popup'),
-    iconField: document.querySelector('.popup__form input[name="icon"]')
-  }
-};
+```ts
+interface WorkoutEntry {
+  date: string;
+  exercise: string;
+  muscleGroup: string;
+  sets: { weight: number; reps: number }[];
+}
+
+function buildMarkdownExport(entries: WorkoutEntry[]): string {
+  const byDate = entries.reduce<Record<string, WorkoutEntry[]>>((acc, entry) => {
+    (acc[entry.date] ??= []).push(entry);
+    return acc;
+  }, {});
+
+  return Object.entries(byDate)
+    .map(([date, dayEntries]) => {
+      const rows = dayEntries
+        .map(({ exercise, muscleGroup, sets }) => {
+          const setsStr = sets.map((s) => `${s.weight}кг×${s.reps}`).join(', ');
+          return `- **${exercise}** (${muscleGroup}): ${setsStr}`;
+        })
+        .join('\n');
+
+      return `## ${date}\n${rows}`;
+    })
+    .join('\n\n');
+}
 ```
 
-## 🚀 Проекты
-- **[Habbit App](https://github.com/XDobriev/habbit-app)**  
-  Приложение для отслеживания привычек. Реализован функционал добавления привычек, учёта дней, прогресс-бары.  
-  **Стек:** JavaScript, HTML, CSS  
+## Опыт работы
 
-- **[Todo App](https://github.com/XDobriev/todo-app)**  
-  Простое приложение для управления задачами. Возможность добавления, удаления и фильтрации.  
-  **Стек:** React, CSS Modules, GitHub Pages  
+### ООО «Курорты Ингушетии» — курорт Армхи
+**Специалист по автоматизации бизнес-процессов**
+*Октябрь 2021 — март 2026*
 
----
+- Интеграция TravelLine ↔ G1-Software (скан паспортов на ресепшене): ожидание гостя сократилось на **10 минут**
+- Интеграция iiko ↔ DocInBox (Честный Знак): экономия **40 000 ₽/мес**, устранена должность сотрудника склада
+- Внедрение Hotbot на сайт курорта: нагрузка колл-центра **−90%** по теме доп. услуг
+- Telegram-бот (TypeScript + Grammy.js + SQLite) для онбординга: инструкции, тесты, трекинг — полный цикл от прототипа до прода (NDA)
+- Настройка CRM/ERP: Битрикс24, Kaiten, UIS, YouGile, TravelLine, iiko, Medesk
 
-## 💼 Опыт работы
+### ООО «Смарт Таргет Центр» — ITHub · KiberOne
+**Преподаватель IT-дисциплин**
+*Октябрь 2023 — н.в.*
 
-### ООО “Курорты Ингушетии” — курорт Армхи / IT-специалист  
-*Октябрь 2021 – настоящее время, Магас*  
+- Курсы: HTML & CSS, алгоритмы и структуры данных, архитектура ИС, основы технической документации
+- Разработка учебных материалов, менторинг студентов по современному стеку
 
-- Внедрение средств автоматизации во все сферы бизнеса  
-- Настройка и поддержка ERP-систем (Битрикс24, TravelLine, iiko, Medesk)  
-- Администрирование сайта компании на WordPress  
-- Настройка бизнес-интеграций между различными системами  
-- Обучение сотрудников и создание документации бизнес-процессов  
+## Проекты
 
-**Проекты:**  
-- Интеграция UIS ↔ Битрикс24  
-- Настройка связи Честный Знак ↔ Medesk  
-- Внедрение сервиса Hotbot на сайте [ingkurort.ru](https://ingkurort.ru)  
+### AvtorStudio — в продакшене
+React 18 · TypeScript strict · Vite · TipTap · Supabase · GitHub Actions (CI/CD → VPS) · Vercel
 
----
+SaaS-платформа для писателей с реальной монетизацией: редактор рукописей (TipTap, 4 режима, история версий с diff, автосохранение), авторизация email + Telegram OAuth + VK ID, RLS-политики, подписки/оплата через Робокассу, адаптивный интерфейс, автоматический деплой через GitHub Actions, админ-панель с продуктовыми метриками (DAU/WAU/MAU, retention), экспорт в DOCX/FB2/EPUB/PDF.
 
-### ООО “Смарт таргет центр” — колледж ITHub и школа KiberOne / преподаватель IT-дисциплин  
-*Октябрь 2023 – настоящее время, Назрань*  
+[avtorstudio.com](https://avtorstudio.com) · [github.com/XDobriev/writers_studio](https://github.com/XDobriev/writers_studio)
 
-- Проведение занятий по HTML, CSS, алгоритмам, архитектуре систем  
-- Обучение работе с технической документацией  
-- Разработка учебных материалов и практических заданий  
-- Консультирование студентов и проверка проектов  
-- Погружение в современные технологии разработки  
+### FinRest — в разработке
+Next.js · React 19 · TypeScript · Python / FastAPI · SQLite · Tailwind CSS · shadcn/ui · Recharts
 
----
+Управленческий учёт для ресторанного бизнеса: загрузка банковских выписок и накладных из Excel, дедупликация, нечёткий поиск (Fuse.js), проводки по статьям ДДС, автоматические отчёты (ДДС, ОПиУ, баланс), дашборд ключевых метрик и графики на Recharts.
 
-## 🎓 Образование
+[github.com/XDobriev/finrest](https://github.com/XDobriev/finrest)
 
-**Московский финансово-промышленный университет “Синергия”**  
-Направление: Информационные системы и программирование  
-*Сентябрь 2021 – Июнь 2025, Магас*  
+### gym95 — Node.js
+Node.js · TypeScript · Telegraf · Supabase
 
-**Центр современной педагогики “IThub”**  
-Специальность: Современные педагогические подходы и технологии  
-*Ноябрь 2024 – Июнь 2025, Магас*  
+Telegram-бот — дневник тренировок: упражнения по группам мышц, кардио и бассейн с прогрессией по весам и повторениям; команда `/export` генерирует структурированный markdown. Полный цикл на Node.js.
 
----
+[github.com/XDobriev/gym95](https://github.com/XDobriev/gym95)
 
-## 📚 Курсы и дополнительное образование
+### CV-Editor — vanilla JS
+JavaScript ES6+ · HTML5 / CSS3 · DOM · localStorage · GitHub Pages
 
-- **Академия Solvo** — курс JavaScript (*Апрель 2023 – Сентябрь 2023*)  
-- **Purple School** — Frontend разработчик (*Январь 2025 – настоящее время*)  
-  - Модули: HTML & CSS, JavaScript Basic, JavaScript Advanced, TypeScript, React & Redux Toolkit, Next.js  
-  - Работа с Git по методу git flow  
+Конструктор резюме на «голом» JS: живое превью, автосохранение в localStorage, экспорт/импорт JSON, печать в PDF. Чистая статика без сборки.
 
----
+[xdobriev.github.io/cv-editor](https://xdobriev.github.io/cv-editor) · [github.com/XDobriev/cv-editor](https://github.com/XDobriev/cv-editor)
 
-## 🌍 Английский язык
-- Уровень: **A2 (Pre-Intermediate)**  
-- Опыт: чтение технической документации, базовое общение в профессиональной среде  
+## Образование
+
+**МФПУ «Синергия»**
+Информационные системы и программирование
+2021 — 2025
+
+**Purple School**
+Frontend Developer — JS, TypeScript, React, Redux Toolkit, Next.js, Git Flow
+2025 — 2026
+
+## Английский язык
+
+Уровень: **B1**
