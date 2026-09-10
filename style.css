@@ -93,6 +93,16 @@ code, pre {
     color: var(--color-muted);
 }
 
+.header__contacts a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-border);
+    text-underline-offset: 3px;
+}
+
+.header__contacts a:hover {
+    text-decoration-color: currentColor;
+}
+
 /* Nav */
 
 .nav {
@@ -108,12 +118,24 @@ code, pre {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 18px;
+    gap: 8px;
 }
 
 .nav a {
-    font-size: 0.85rem;
+    display: inline-block;
+    font-size: 0.8rem;
     font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+
+.nav a:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    background: var(--color-surface);
 }
 
 /* Layout */
