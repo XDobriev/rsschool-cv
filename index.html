@@ -1,12 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
+    <title>Хамзат Добриев — CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>CV</h1>
+    <div class="page">
+        <header class="header">
+            <img class="header__photo" src="photo.jpg" alt="Хамзат Добриев, Frontend Developer">
+            <div class="header__intro">
+                <h1 class="header__name">Хамзат Добриев</h1>
+                <p class="header__role">Frontend Developer — готов к релокации</p>
+            </div>
+            <ul class="header__contacts">
+                <li><a href="mailto:XDobriev@yandex.ru">XDobriev@yandex.ru</a></li>
+                <li><a href="tel:+79631342693">+7 (963) 134-26-93</a></li>
+                <li><a href="https://t.me/XDobriev" target="_blank" rel="noopener">Telegram: @XDobriev</a></li>
+                <li><a href="https://github.com/XDobriev" target="_blank" rel="noopener">GitHub: XDobriev</a></li>
+                <li>Discord: xdobriev</li>
+                <li><a href="https://avtorstudio.com" target="_blank" rel="noopener">avtorstudio.com</a></li>
+                <li>Назрань — удалённо</li>
+            </ul>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="#about">О себе</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#code">Пример кода</a></li>
+                <li><a href="#experience">Опыт работы</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#education">Образование</a></li>
+                <li><a href="#english">Английский язык</a></li>
+            </ul>
+        </nav>
+
+        <main class="main">
+            <section id="about" class="section">
+                <h2>О себе</h2>
+                <p>
+                    Frontend-разработчик с опытом создания SaaS-продукта с реальной монетизацией.
+                    Разрабатываю интерфейсы на React и TypeScript, уделяя внимание качеству кода,
+                    пользовательскому опыту и продуктовым метрикам. Интересно развиваться в команде,
+                    где можно участвовать в развитии продукта, обсуждать решения и учиться у сильных
+                    разработчиков. Активно применяю AI-инструменты в ежедневной разработке.
+                </p>
+            </section>
+
+            <section id="skills" class="section">
+                <h2>Навыки</h2>
+                <div class="skills">
+                    <div class="skills__group">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>JavaScript ES6+</li>
+                            <li>HTML5 / CSS3</li>
+                            <li>TanStack Query</li>
+                            <li>React Hook Form</li>
+                            <li>TipTap</li>
+                        </ul>
+                    </div>
+                    <div class="skills__group">
+                        <h3>Backend &amp; данные</h3>
+                        <ul>
+                            <li>Supabase</li>
+                            <li>PostgreSQL</li>
+                            <li>SQLite</li>
+                            <li>REST API</li>
+                            <li>FastAPI</li>
+                        </ul>
+                    </div>
+                    <div class="skills__group">
+                        <h3>Инструменты</h3>
+                        <ul>
+                            <li>Git / GitHub Actions</li>
+                            <li>CI/CD</li>
+                            <li>Vercel</li>
+                            <li>Figma</li>
+                            <li>Vitest</li>
+                            <li>Playwright</li>
+                        </ul>
+                    </div>
+                    <div class="skills__group">
+                        <h3>AI в разработке</h3>
+                        <ul>
+                            <li>Claude Code</li>
+                            <li>Cursor</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="code" class="section">
+                <h2>Пример кода</h2>
+                <p>
+                    Фрагмент из <a href="https://github.com/XDobriev/gym95" target="_blank" rel="noopener">gym95</a> —
+                    команда <code>/export</code> формирует markdown-выгрузку дневника тренировок:
+                </p>
+                <pre><code>interface WorkoutEntry {
+  date: string;
+  exercise: string;
+  muscleGroup: string;
+  sets: { weight: number; reps: number }[];
+}
+
+function buildMarkdownExport(entries: WorkoutEntry[]): string {
+  const byDate = entries.reduce&lt;Record&lt;string, WorkoutEntry[]&gt;&gt;((acc, entry) =&gt; {
+    (acc[entry.date] ??= []).push(entry);
+    return acc;
+  }, {});
+
+  return Object.entries(byDate)
+    .map(([date, dayEntries]) =&gt; {
+      const rows = dayEntries
+        .map(({ exercise, muscleGroup, sets }) =&gt; {
+          const setsStr = sets.map((s) =&gt; `${s.weight}кг×${s.reps}`).join(', ');
+          return `- **${exercise}** (${muscleGroup}): ${setsStr}`;
+        })
+        .join('\n');
+
+      return `## ${date}\n${rows}`;
+    })
+    .join('\n\n');
+}</code></pre>
+            </section>
+
+            <section id="experience" class="section">
+                <h2>Опыт работы</h2>
+
+                <article class="entry">
+                    <h3>ООО «Курорты Ингушетии» — курорт Армхи</h3>
+                    <p class="entry__meta">Специалист по автоматизации бизнес-процессов · <time datetime="2021-10">октябрь 2021</time> — <time datetime="2026-03">март 2026</time></p>
+                    <ul>
+                        <li>Интеграция TravelLine ↔ G1-Software (скан паспортов на ресепшене): ожидание гостя сократилось на 10 минут</li>
+                        <li>Интеграция iiko ↔ DocInBox (Честный Знак): экономия 40 000 ₽/мес, устранена должность сотрудника склада</li>
+                        <li>Внедрение Hotbot на сайт курорта: нагрузка колл-центра −90% по теме доп. услуг</li>
+                        <li>Telegram-бот (TypeScript + Grammy.js + SQLite) для онбординга: инструкции, тесты, трекинг — полный цикл от прототипа до прода (NDA)</li>
+                        <li>Настройка CRM/ERP: Битрикс24, Kaiten, UIS, YouGile, TravelLine, iiko, Medesk</li>
+                    </ul>
+                </article>
+
+                <article class="entry">
+                    <h3>ООО «Смарт Таргет Центр» — ITHub · KiberOne</h3>
+                    <p class="entry__meta">Преподаватель IT-дисциплин · <time datetime="2023-10">октябрь 2023</time> — н.в.</p>
+                    <ul>
+                        <li>Курсы: HTML &amp; CSS, алгоритмы и структуры данных, архитектура ИС, основы технической документации</li>
+                        <li>Разработка учебных материалов, менторинг студентов по современному стеку</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>Проекты</h2>
+
+                <article class="entry">
+                    <h3>AvtorStudio — в продакшене</h3>
+                    <p class="entry__meta">React 18 · TypeScript strict · Vite · TipTap · Supabase · GitHub Actions (CI/CD → VPS) · Vercel</p>
+                    <p>
+                        SaaS-платформа для писателей с реальной монетизацией: редактор рукописей (TipTap, 4 режима,
+                        история версий с diff, автосохранение), авторизация email + Telegram OAuth + VK ID,
+                        RLS-политики, подписки/оплата через Робокассу, адаптивный интерфейс, автоматический деплой
+                        через GitHub Actions, админ-панель с продуктовыми метриками (DAU/WAU/MAU, retention),
+                        экспорт в DOCX/FB2/EPUB/PDF.
+                    </p>
+                    <ul>
+                        <li><a href="https://avtorstudio.com" target="_blank" rel="noopener">avtorstudio.com</a></li>
+                        <li><a href="https://github.com/XDobriev/writers_studio" target="_blank" rel="noopener">github.com/XDobriev/writers_studio</a></li>
+                    </ul>
+                </article>
+
+                <article class="entry">
+                    <h3>FinRest — в разработке</h3>
+                    <p class="entry__meta">Next.js · React 19 · TypeScript · Python / FastAPI · SQLite · Tailwind CSS · shadcn/ui · Recharts</p>
+                    <p>
+                        Управленческий учёт для ресторанного бизнеса: загрузка банковских выписок и накладных из
+                        Excel, дедупликация, нечёткий поиск (Fuse.js), проводки по статьям ДДС, автоматические
+                        отчёты (ДДС, ОПиУ, баланс), дашборд ключевых метрик и графики на Recharts.
+                    </p>
+                    <ul>
+                        <li><a href="https://github.com/XDobriev/finrest" target="_blank" rel="noopener">github.com/XDobriev/finrest</a></li>
+                    </ul>
+                </article>
+
+                <article class="entry">
+                    <h3>gym95 — Node.js</h3>
+                    <p class="entry__meta">Node.js · TypeScript · Telegraf · Supabase</p>
+                    <p>
+                        Telegram-бот — дневник тренировок: упражнения по группам мышц, кардио и бассейн с
+                        прогрессией по весам и повторениям; команда <code>/export</code> генерирует структурированный
+                        markdown. Полный цикл на Node.js.
+                    </p>
+                    <ul>
+                        <li><a href="https://github.com/XDobriev/gym95" target="_blank" rel="noopener">github.com/XDobriev/gym95</a></li>
+                    </ul>
+                </article>
+
+                <article class="entry">
+                    <h3>CV-Editor — vanilla JS</h3>
+                    <p class="entry__meta">JavaScript ES6+ · HTML5 / CSS3 · DOM · localStorage · GitHub Pages</p>
+                    <p>
+                        Конструктор резюме на «голом» JS: живое превью, автосохранение в localStorage,
+                        экспорт/импорт JSON, печать в PDF. Чистая статика без сборки.
+                    </p>
+                    <ul>
+                        <li><a href="https://xdobriev.github.io/cv-editor" target="_blank" rel="noopener">xdobriev.github.io/cv-editor</a></li>
+                        <li><a href="https://github.com/XDobriev/cv-editor" target="_blank" rel="noopener">github.com/XDobriev/cv-editor</a></li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="education" class="section">
+                <h2>Образование</h2>
+                <ul>
+                    <li>
+                        <strong>МФПУ «Синергия»</strong> — Информационные системы и программирование
+                        <span class="entry__meta">2021 — 2025</span>
+                    </li>
+                    <li>
+                        <strong>Purple School</strong> — Frontend Developer: JS, TypeScript, React, Redux Toolkit, Next.js, Git Flow
+                        <span class="entry__meta">2025 — 2026</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="english" class="section">
+                <h2>Английский язык</h2>
+                <p>Уровень: <strong>B1</strong></p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <a class="footer__github" href="https://github.com/XDobriev" target="_blank" rel="noopener">github.com/XDobriev</a>
+            <span class="footer__year">© <time datetime="2026">2026</time></span>
+            <a class="footer__logo" href="https://rs.school/" target="_blank" rel="noopener">
+                <img src="assets/rs-school-logo.svg" alt="RS School">
+            </a>
+        </footer>
+    </div>
 </body>
 </html>
